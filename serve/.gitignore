@@ -1,85 +1,85 @@
 venv
 db_produtos.sqlite3
- .gradle/
-        .idea/
-        Advanced Analytics in Power BI with R and Python.epub
-        Algoritmos_Teoria_e_Pratica_Thomas_Corme.pdf
-        AprendendoVisaoComputacionalComOpenCV.pdf
-        Balabolka.lnk
-        BitTorrent Web.lnk
-        "Building_Progressive_Web_Applications_with_Vuejs_Copyright_\302\251_2020.pdf"
-        CSS Grid Layout - Guia Completo - display grid;.html
-        CSS Grid Layout - Guia Completo - display grid;_arquivos/
-        Calculo Vol 1 (5 ed) - James Stewart.pdf
-        ClinicaVeterinaria_java/
-        ConectandoLoginComBancoDados.png
-        Continuous Delivery in Java.epub
-        CursoVuejs/
-        Docker Desktop.lnk
-        Eclipse IDE for Enterprise Java Developers - 2020-09.lnk
-        Esboco PB_079-T[2507].doc
-        FreeMind.lnk
-        "Frontend_com_VueJs_da_Teoria_a_pr\303\241tica_sem_Complica\303\247\303\265es_Copyright.pdf"
-        "Getting to Know VueJs - Copyright \302\251 2018.pdf"
-        GitHub Desktop.lnk
-        Google Chrome.lnk
-        "Hands_Nuxtjs_Web_Development_Static_Generated_Copyright_\302\251_2020.pdf"
-        Kindle.lnk
-        Learn Computer Vision Using OpenCV.epub
-        LivroFlask/.idea/
-        LivroFlask/__pycache__/
-        LivroFlask/requirements.txt
-        LivroFlask/template_2/
-        LivroFlask/templates/icone_menu.png
-        LivroFlask/templates/pythonFlameBack.png
-        LivroFlask/venv/
-        Padroes_de_Projetos_Solucoes_Reutilizave.pdf
-        PaginasHtml/
-        "Pro VueJs 2 - Copyright \302\251 2018.pdf"
-        ProjetoTesteFlask/
-        Projeto_GraficoFlaskPython/
-        Projeto_JavaGIT/
-        Projeto_do_teste/
-        Projeto_python_IN_html/.idea/
-        Projeto_python_IN_html/__pycache__/
-        Projeto_python_IN_html/venv/
-        Projetos_Blender/
-        Projetos_Python/
-        Projto_JavaAPP/
-        "Serasa-Desafio-T\303\251cnico-vaga_de_python.pdf"
-        Telegram.lnk
-        VueJs 2.pdf
-        "VueJs Construa Aplica\303\247\303\265es Incr\303\255veis - Copyright \302\251 2019.pdf"
-        "VueJs Up and Running - Copyright \302\251 2018.pdf"
-        WhatsApp.lnk
-        Zoom.lnk
-        ap3Matemat.png
-        blender.lnk
-        boletoAntiVirus1.png
-        boletoAntiVirus2.png
-        build.gradle
-        conexaoComBancoDeDados.pptx
-        dataDasProvas.jpeg
-        desktop.ini
-        dicasDeEntrevistaPara_TI.pdf
-        faixaLogoFrontal.png
-        gradle/
-        gradlew
-        gradlew.bat
-        index.html
-        local.properties
-        logar_1.png
-        logar_2.png
-        logar_3.png
-        loginVeterinaria.png
-        logoFrontalVeter.svg
-        logoVeteBand_2.svg
-        logoVeteriBand.svg
-        modeloBancoDados/
-        mysql-notes-for-professionals-book.pdf
-        pagamentoAntiVirus.jpg
-        "tela_AcoesAcessoAplica\303\247\303\243o.png"
-        tela_CadastroPets.png
-        tela_cadastroClientes.png
-        test flask-vue-crud[2238].pdf
-        tetagramaInvertido.svg
+.gradle/
+.idea/
+Advanced Analytics in Power BI with R and Python.epub
+Algoritmos_Teoria_e_Pratica_Thomas_Corme.pdf
+AprendendoVisaoComputacionalComOpenCV.pdf
+Balabolka.lnk
+BitTorrent Web.lnk
+"Building_Progressive_Web_Applications_with_Vuejs_Copyright_\302\251_2020.pdf"
+CSS Grid Layout - Guia Completo - display grid;.html
+CSS Grid Layout - Guia Completo - display grid;_arquivos/
+Calculo Vol 1 (5 ed) - James Stewart.pdf
+ClinicaVeterinaria_java/
+ConectandoLoginComBancoDados.png
+Continuous Delivery in Java.epub
+CursoVuejs/
+Docker Desktop.lnk
+Eclipse IDE for Enterprise Java Developers - 2020-09.lnk
+Esboco PB_079-T[2507].doc
+FreeMind.lnk
+"Frontend_com_VueJs_da_Teoria_a_pr\303\241tica_sem_Complica\303\247\303\265es_Copyright.pdf"
+"Getting to Know VueJs - Copyright \302\251 2018.pdf"
+GitHub Desktop.lnk
+Google Chrome.lnk
+"Hands_Nuxtjs_Web_Development_Static_Generated_Copyright_\302\251_2020.pdf"
+Kindle.lnk
+Learn Computer Vision Using OpenCV.epub
+LivroFlask/.idea/
+LivroFlask/__pycache__/
+LivroFlask/requirements.txt
+LivroFlask/template_2/
+LivroFlask/templates/icone_menu.png
+LivroFlask/templates/pythonFlameBack.png
+LivroFlask/venv/
+Padroes_de_Projetos_Solucoes_Reutilizave.pdf
+PaginasHtml/
+"Pro VueJs 2 - Copyright \302\251 2018.pdf"
+ProjetoTesteFlask/
+Projeto_GraficoFlaskPython/
+Projeto_JavaGIT/
+Projeto_do_teste/
+Projeto_python_IN_html/.idea/
+Projeto_python_IN_html/__pycache__/
+Projeto_python_IN_html/venv/
+Projetos_Blender/
+Projetos_Python/
+Projto_JavaAPP/
+"Serasa-Desafio-T\303\251cnico-vaga_de_python.pdf"
+Telegram.lnk
+VueJs 2.pdf
+"VueJs Construa Aplica\303\247\303\265es Incr\303\255veis - Copyright \302\251 2019.pdf"
+"VueJs Up and Running - Copyright \302\251 2018.pdf"
+WhatsApp.lnk
+Zoom.lnk
+ap3Matemat.png
+blender.lnk
+boletoAntiVirus1.png
+boletoAntiVirus2.png
+build.gradle
+conexaoComBancoDeDados.pptx
+dataDasProvas.jpeg
+desktop.ini
+dicasDeEntrevistaPara_TI.pdf
+faixaLogoFrontal.png
+gradle/
+gradlew
+gradlew.bat
+index.html
+local.properties
+logar_1.png
+logar_2.png
+logar_3.png
+loginVeterinaria.png
+logoFrontalVeter.svg
+logoVeteBand_2.svg
+logoVeteriBand.svg
+modeloBancoDados/
+mysql-notes-for-professionals-book.pdf
+pagamentoAntiVirus.jpg
+"tela_AcoesAcessoAplica\303\247\303\243o.png"
+tela_CadastroPets.png
+tela_cadastroClientes.png
+test flask-vue-crud[2238].pdf
+tetagramaInvertido.svg
