@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Produtos</title>
+        <!--
+        <link rel="stylesheet" href="style.css">
+        -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    </head>
+    <body>
+        <h1 style="text-align: center;">Cadastro de Produtos</h1>
+
+        <div class="container">
+
+            <div class="col-xs-12">
+                <a href="/add">Adicionar Produtos</a>
+            </div>
+
+            <div class="row">
+
+                <div class="col-xs-12">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Preço</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for l in produtos %}
+                        <tr>
+                            <td>{{ l.id }}</td>
+                            <td>{{ l.nome }}</td>
+                            <td>{{ l.quantidade }}</td>
+                            <td>{{ l.preco }}</td>
+                            <td>
+                                <a href="/edit/{{l.id}}">Editar </a> |
+                                <a href="/delete/{{l.id}}">Excluir</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        <!---->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Editar Produtos</title>
+</head>
+<body>
+<h1 style="text-align: center;">Editar um Produto {{ edit_produto.nome }}</h1>
+<form action="/edit/{{ edit_produto.id }}" class="container" method="post">
+    <div class="row">
+        <div class="col-md-1">
+            <input type="number" name="id" id="id" class="form-control"
+            value="{{ edit_produto.id }}">
+        </div>
+        <div class="col-md-4">
+            <input type="text" name="nome" id="nome" placeholder="nome do produto" class="form-control"
+            value="{{ edit_produto.nome }}">
+        </div>
+        <div class="col-md-4">
+            <input type="number" name="quantidade" id="quantidade" placeholder="quantidade" class="form-control"
+            value="{{ edit_produto.quantidade }}">
+        </div>
+        <div class="col-md-2">
+            <input type="number" name="preco" id="preco" placeholder="" class="form-control"
+            value="{{ edit_produto.preco }}">
+        </div>
+    </div>
+    <br>
+    <div class="row col-xs-12">
+        <button type="submit" class="btn btn-block btn-success">Enviar</button>
+    </div>
+
+</form>
+</body>
+</html>
