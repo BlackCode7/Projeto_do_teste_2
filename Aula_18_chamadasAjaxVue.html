@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vue curso Pedro</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css">
+    </head>
+    <body>
+
+        <div id="main">
+            <br>
+            <div class="container">
+                <h2>{{ titulo }}</h2>
+                <button @click.stop.prevent="getUsers()" class="btn btn-success">Get_Button</button>
+                
+                <ul>
+                    <li v-for="user in users">{{ user.name }}</li>
+                </ul>
+           
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+        <script>
+            var mixin = {
+                // metodo pra pegar urls
+                methods: {
+                    getUsers() {
+                        var url = 'http://jsonplaceholder.typicode.com/users';
+                        // guando a função get terminar ai vem a promice .then()
+                        this.$http.get(url).then(function(r){
+                            this.users = r.body;
+                        }, function(error) { 
+                            console.log(error);                           
+                        });
+                    }
+                }
+            }
+            var main = new Vue({
+                el: "#main",
+                mixin:[mixin],
+                data: {
+                    titulo:"Chamandas ajax para APIs",
+                    users: [],
+                }
+            });
+        </script>
+</html>

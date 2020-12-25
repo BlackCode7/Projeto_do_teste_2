@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+
+    <body>
+        <div id="app">
+            <p>aula 18 - VueJs - Ajax >>> Como fazer uma chamada ajax com Vue js?</p>
+            <div class="container">
+                <h1>{{ titulo }}</h1>
+                <button @click.stop.prevent="getUsers()" class="btn btn-success"> GET USERS</button>
+                <!--Eu so voui exibir o erro se o response.status == error, condicional-->
+                <div v-if="response.status == error" class="alert alert-danger">{{ response.msg }}</div>
+                <div v-if="loader.users" class="">Carregando Usuário!</div>
+                
+                <ul>
+                    <li v-for="user in users">{{ user.name }}</li>
+                </ul>
+
+            </div>
+        </div>
+        
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>
+        <script>
+            var mixin = {
+                methods: {
+                    getUsers() {
+                        this.loader.users = true;
+
+                        var url = 'http://jsonplaceholder.typicode.com/users';
+                        // Pegando o que vem da requisição da API
+                        this.$http.get(url).then(function(response) {
+                            // guardando dentro da variável a resposta da requisição
+                            this.users = response.body;
+                            // Pegando a resposta que esta dentro da tag body
+                            console.log(response.body);
+                            // Caso de algum erro na hora de fazer a requisição
+                        }, function(error){
+                            // Exibindo msg de erro ao usuario
+                            this.response.status = "error";                            
+                        }) 
+                        .finally(function(){
+                            this.loader.users = false;
+                        });
+                    }
+                }
+            }
+            var app = new Vue({
+                el: "#app",
+                mixins: [mixin],
+                data: {
+                    titulo: "Vue do jeito certo",
+                    // lista vazia que vau armazenar os dados da requisição
+                    users : [],
+                    loader: {
+                        users: false,
+                    },
+                    // Informando ao usuário o erro ocorrido na requisição
+                    response: {
+                        msg: "Error ao conectar",
+                        status = ""
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

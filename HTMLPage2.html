@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        <p>Como podemos fazer para transferir dados entre componentes que não são parentes!</p>
+    
+        <div class="container">
+            <input-form></input-form>
+            <br />
+            <my-list></my-list>
+        </div>
+    
+    </div>
+    <br />      
+        
+    <template id="form">
+        <div class="container">
+            <div class="card">
+                <div class="card-block">
+                    <div class="form-group">
+                        <label for="">Titulo</label>
+                        <input v-model="title" type="text" 
+                               class="form-control" />
+                    </div>
+                    <!-- Registro de eventos definido no component input-form-->
+                    <button @click.stop.prevent="submit()"
+                            class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>    
+    </template>
+
+    <template id="list">
+        <ul class="list-group">
+            <li class="list-group-item">game pd thrones</li>
+            <li class="list-group-item">The Last king</li>
+            <li class="list-group-item">gambito da dama</li>
+            <li class="list-group-item">vikings</li>
+            <li class="list-group-item">The See</li>
+        </ul>
+    </template>       
+
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+
+        Vue.component("input-form", {
+            template: '#form',
+            data() {
+                title: '',
+            },
+            methods: {
+                submit() {
+                    eventBus.$emit('submit', this.title);
+                };
+            }
+        });
+                
+        Vue.component('my-list', {
+            template: '#list',
+            created() {
+                var sm = this;;
+                eventBus.$on('submit', function () {
+                    if (title) {
+                        sm.list.push({ title: title });
+                    }
+                });
+            },
+
+            data() {
+                return {
+                    list: [
+                        {title: "ir a feira"},
+                    ]
+                }
+            }
+        });
+
+        // So conseguimos fazer a transferencia entre oas componentes
+        // se usarmos o eventBus QUE É UMA nova instancia do vue
+        var eventBus = new Vue();
+
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Vue Curso"
+            },
+        });
+
+    </script>
+    
+</body>
+</html>

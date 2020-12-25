@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Curso de Vue</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        <navbar></navbar>
+    </div>
+
+    <template id="nav">
+        <ul>
+            <li>Produtos</li>
+            <li>Cadastro</li>
+            <li>Listagem</li>
+            <li>Deletados</li>
+        </ul>
+    </template>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+
+        Vue.component('navbar', {
+            template: '#nav'
+            props: ['items']
+        });
+
+        var app = new Vue({
+            el: "#app",
+            data: {
+                titulo: "Vue do geito certo"
+            }
+        });
+
+    </script>
+</body>
+</html>
+

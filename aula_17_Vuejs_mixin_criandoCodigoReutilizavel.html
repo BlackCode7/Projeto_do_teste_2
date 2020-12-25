@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>{{ titulo }}</h1>
+            <form>
+                <input />
+            </form>
+            <button @click.stop.prevent="getUsers()">SUBMIT</button>
+        </div>
+    </div>
+    <p>Usando o mixins para criar código reutilizavel</p>
+    <p> https://www.youtube.com/watch?v=inCgsoDb_ug&list=PLcoYAcR89n-qq1vGRbaUiV6Q9puy0qigW&index=17 </p>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+
+        var mixin = {
+            created() {
+                console.log('testando o mixin')
+            },
+
+            methods: {
+                //replicou o getUsers()
+                getUsers() {
+                    console.log('Primeira instancia de mixin')
+                },
+            }
+        }
+        
+        var app = new Vue({
+            el: '#app',
+            mixins: [mixin],
+            create() {
+                console.log('Hello vue mostrando mixin instanciado')
+            },
+            data: {
+                titulo: "VueJs do geito certo!",
+            },
+            methods: {
+                getUsers() {
+                    // metodo para rotinas
+                    // e buscar de usuários dentro do
+                    // banco
+                    console.log('Get Users')
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

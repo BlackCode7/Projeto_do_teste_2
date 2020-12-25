@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vue curso Pedro</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css">
+        <style>
+            .fade-enter-active, .fade-leave-active {
+                transition: opacity .5s
+            }
+            .fade-enter, .fade-leave-to {
+                opacity: 0
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--Aqui é onde toda nossa aplicação será renderizada!-->
+        <div id="app">
+            <br><br>
+            <div class="container">
+                <h1>{{ titulo }}</h1>               
+                
+                <select v-model="movie">
+                    <option value="transformers">Transformers</option>
+                    <option value="game-of-thrones">Game of Thrones</option>
+                </select>                
+
+                <transition name="fade">
+                    <component :is="movie"></component>
+                </transition>
+
+                <transformers v-if="movie == 'transformers'"></transformers>
+                <game-of-thrones v-if="movie == 'game-of-thrones"></game-of-thrones>
+                
+                <ul>
+                    <li v-for="(item, index) in users" :key="item.name">{{ item.name }}<a @click.stop.prevent="remove"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Criação dos templates-->
+        <template id="transformes">
+        </template>
+        <template id="game-of-thrones">            
+        </template>
+                
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>
+        <script>
+            //Vue.components('transformers', {})
+            //Vue.components('game-of-thrones', {})
+            var app = new Vue({
+                el: "#app",
+
+                mounted() {
+                    console.log(this.$refs.users);
+                },
+                
+                data: {
+                    titulo: "Entendendo o vue",
+                    users: [
+                        {name: 'Anderson'},
+                        {name: 'Simon'},
+                        {name: 'Josy'}
+                    ],
+
+                    movie: ""
+                },
+                methods: {
+                    remove(index) {
+                        this.users.splice(index, 1);
+                    }  
+                }
+            })
+            
+        </script>
+    </body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
