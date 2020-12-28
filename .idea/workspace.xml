@@ -21,14 +21,18 @@
   <component name="ChangeListManager">
     <list default="true" id="d8f48dd9-4834-423a-84e8-41e0d2a81ba4" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../LivroFlask/hello.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LivroFlask/openXLSX.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../LivroFlask/templates/estilo.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../LivroFlask/templates/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../LivroFlask/templates/index_menu.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../LivroFlask/templates/lista.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../LivroFlask/templates/menu.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../LivroFlask/templates/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Projeto_do_teste_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projeto_do_teste_2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Projeto_Python_Pandas_ViaReversa/PythonComExcel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Projeto_Python_Pandas_ViaReversa/analise.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Projeto_Python_Pandas_ViaReversa/excelModifi.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Projeto_Python_Pandas_ViaReversa/testePandasPython.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Projeto_Python_Pandas_ViaReversa/xlsxPython.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
     </list>
